@@ -198,12 +198,6 @@ a:hover{
     border-radius:20px;
 }
 
-input, textarea{
-    width:100%;
-}
-
-
-
 @media screen and (max-width:768px){
 
     .h-name{
