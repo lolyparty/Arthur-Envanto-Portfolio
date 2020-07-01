@@ -231,7 +231,7 @@ a:hover{
         .option{
             flex-wrap: wrap;
             justify-content: space-between !important;
-            align-content:start;
+            /* align-content:start; */
         }
 }
 
