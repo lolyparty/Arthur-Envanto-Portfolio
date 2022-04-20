@@ -9,6 +9,26 @@ body{
     margin:0px;
 }
 
+.container{
+    overflow: hidden !important;
+}
+
+.scroll_top{
+    height:30px;
+    width:30px;
+    position: fixed;
+    top:70vh;
+    background:transparent;
+    right:3%;
+    z-index:10000000;
+}
+
+.fa.fa-arrow-up{
+    align-self: center;
+    color:#000;
+    cursor: pointer;
+}
+
 .welcome{
     background: url('img/back.png');
     background-repeat: no-repeat;
@@ -30,6 +50,10 @@ body{
 
 .hire-btn:hover{
     background:#000;
+    color:#fff;
+}
+
+.hire-btn a:hover{
     color:#fff;
 }
 
@@ -57,16 +81,27 @@ body{
     border:1px solid #fff;
 }
 
-.slide-nav{
+.slider{
     position:fixed;
-    width:100% !important;
     height:100%;
     box-sizing: border-box;
     z-index: 10000;
+    animation:slide 600ms ease-in 1;
+    animation-fill-mode: forwards;
 } 
+
+@keyframes slide{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:100%;
+    }
+}
 
 .closure{
     display:none !important;
+    width:0% !important;
 }
 
 .navlink{
@@ -78,18 +113,16 @@ body{
     height:30px;
     width:30px;
     position:absolute;
-    top:8%;
-    left:82%;
+    top:5%;
+    left:75%;
 }
 
 .closebtn:hover{
     cursor:pointer;
 }
 
-
-
 .navlist{
-    margin-top:10rem !important;
+    margin-top:5rem !important;
 }
 
 ul li{
@@ -183,7 +216,9 @@ a:hover{
     border-radius:20px;
 }
 
-
+.img-rep{
+    width:100% !important;
+}
 
 @media screen and (max-width:768px){
 
@@ -215,7 +250,14 @@ a:hover{
 
         .option{
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-between !important;
+            /* align-content:start; */
         }
 }
 
+@media only screen and (min-width:768px) and (max-width:1200px) {
+    .contact-input{
+        width:450px !important;
+        margin-right:0px !important;        
+    }
+}
